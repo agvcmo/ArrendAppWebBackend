@@ -24,6 +24,19 @@
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>
+                        <ul class="navbar-nav">
+                            <li>@Html.ActionLink("Archivoes", "Index", "Archivoes")</li>
+                            <li>@Html.ActionLink("Arrendatarios", "Index", "Arrendatarios")</li>
+                            <li>@Html.ActionLink("Contratoes", "Index", "Contratoes")</li>
+                            <li>@Html.ActionLink("Habitacions", "Index", "Habitacions")</li>
+                            <li>@Html.ActionLink("Inmuebles", "Index", "Inmuebles")</li>
+                            <li>@Html.ActionLink("Novedads", "Index", "Novedads")</li>
+                            <li>@Html.ActionLink("Pagoes", "Index", "Pagoes")</li>
+                            <li>@Html.ActionLink("Usuarios", "Index", "Usuarios")</li>
+                        </ul>
+                    </li>
+    
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>

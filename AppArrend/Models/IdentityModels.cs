@@ -29,5 +29,21 @@ namespace AppArrend.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<AppArrend.Models.Archivo> Archivos { get; set; }
+
+        public System.Data.Entity.DbSet<AppArrend.Models.Habitacion> Habitaciones { get; set; }
+
+        public System.Data.Entity.DbSet<AppArrend.Models.Novedad> Novedades { get; set; }
+
+        public System.Data.Entity.DbSet<AppArrend.Models.Usuario> Usuarios { get; set; }
+
+        public System.Data.Entity.DbSet<AppArrend.Models.Arrendatario> Arrendatarios { get; set; }
+
+        public System.Data.Entity.DbSet<AppArrend.Models.Contrato> Contratos { get; set; }
+
+        public System.Data.Entity.DbSet<AppArrend.Models.Inmueble> Inmuebles { get; set; }
+
+        public System.Data.Entity.DbSet<AppArrend.Models.Pago> Pagos { get; set; }
     }
 }

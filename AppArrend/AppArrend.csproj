@@ -44,6 +44,34 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net46\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
@@ -178,14 +206,38 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ArchivoesController.cs" />
+    <Compile Include="Controllers\ArrendatariosController.cs" />
+    <Compile Include="Controllers\ContratoesController.cs" />
+    <Compile Include="Controllers\HabitacionsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InmueblesController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\NovedadsController.cs" />
+    <Compile Include="Controllers\PagoesController.cs" />
+    <Compile Include="Controllers\UsuariosController.cs" />
+    <Compile Include="Enumeracion\EnumEstadoContrato.cs" />
+    <Compile Include="Enumeracion\EnumGenero.cs" />
+    <Compile Include="Enumeracion\EnumMedioDePAgo.cs" />
+    <Compile Include="Enumeracion\EnumRolUsuario.cs" />
+    <Compile Include="Enumeracion\EnumSiNo.cs" />
+    <Compile Include="Enumeracion\EnumTipoArchivo.cs" />
+    <Compile Include="Enumeracion\EnumTipoDaño.cs" />
+    <Compile Include="Enumeracion\EnumTipoInmueble.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Archivo.cs" />
+    <Compile Include="Models\Arrendatario.cs" />
+    <Compile Include="Models\Contrato.cs" />
+    <Compile Include="Models\Habitacion.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Inmueble.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Novedad.cs" />
+    <Compile Include="Models\Pago.cs" />
+    <Compile Include="Models\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -198,6 +250,9 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -210,7 +265,9 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -244,6 +301,46 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Archivoes\Create.cshtml" />
+    <Content Include="Views\Archivoes\Delete.cshtml" />
+    <Content Include="Views\Archivoes\Details.cshtml" />
+    <Content Include="Views\Archivoes\Edit.cshtml" />
+    <Content Include="Views\Archivoes\Index.cshtml" />
+    <Content Include="Views\Arrendatarios\Create.cshtml" />
+    <Content Include="Views\Arrendatarios\Delete.cshtml" />
+    <Content Include="Views\Arrendatarios\Details.cshtml" />
+    <Content Include="Views\Arrendatarios\Edit.cshtml" />
+    <Content Include="Views\Arrendatarios\Index.cshtml" />
+    <Content Include="Views\Contratoes\Create.cshtml" />
+    <Content Include="Views\Contratoes\Delete.cshtml" />
+    <Content Include="Views\Contratoes\Details.cshtml" />
+    <Content Include="Views\Contratoes\Edit.cshtml" />
+    <Content Include="Views\Contratoes\Index.cshtml" />
+    <Content Include="Views\Habitacions\Create.cshtml" />
+    <Content Include="Views\Habitacions\Delete.cshtml" />
+    <Content Include="Views\Habitacions\Details.cshtml" />
+    <Content Include="Views\Habitacions\Edit.cshtml" />
+    <Content Include="Views\Habitacions\Index.cshtml" />
+    <Content Include="Views\Inmuebles\Create.cshtml" />
+    <Content Include="Views\Inmuebles\Delete.cshtml" />
+    <Content Include="Views\Inmuebles\Details.cshtml" />
+    <Content Include="Views\Inmuebles\Edit.cshtml" />
+    <Content Include="Views\Inmuebles\Index.cshtml" />
+    <Content Include="Views\Novedads\Create.cshtml" />
+    <Content Include="Views\Novedads\Delete.cshtml" />
+    <Content Include="Views\Novedads\Details.cshtml" />
+    <Content Include="Views\Novedads\Edit.cshtml" />
+    <Content Include="Views\Novedads\Index.cshtml" />
+    <Content Include="Views\Pagoes\Create.cshtml" />
+    <Content Include="Views\Pagoes\Delete.cshtml" />
+    <Content Include="Views\Pagoes\Details.cshtml" />
+    <Content Include="Views\Pagoes\Edit.cshtml" />
+    <Content Include="Views\Pagoes\Index.cshtml" />
+    <Content Include="Views\Usuarios\Create.cshtml" />
+    <Content Include="Views\Usuarios\Delete.cshtml" />
+    <Content Include="Views\Usuarios\Details.cshtml" />
+    <Content Include="Views\Usuarios\Edit.cshtml" />
+    <Content Include="Views\Usuarios\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

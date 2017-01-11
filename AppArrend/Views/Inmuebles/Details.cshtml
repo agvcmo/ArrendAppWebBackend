@@ -1,0 +1,130 @@
+﻿@model AppArrend.Models.Inmueble
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Inmueble</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ContratoInmueble.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContratoInmueble.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Direccion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Direccion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Telefono)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Telefono)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tipo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tipo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BañosComunes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BañosComunes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Area)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Area)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estrato)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estrato)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Precio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Precio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Patio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Patio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Parqueadero)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Parqueadero)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Lavadero)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lavadero)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Comedor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Comedor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SalaComedor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SalaComedor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sala)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sala)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

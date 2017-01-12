@@ -21,6 +21,6 @@ namespace AppArrend.Models
         [Display(Name = "Inmueble")]
         public int InmueblePagoID { get; set; }
         public virtual Inmueble InmueblePago { get; set; }        
-        public virtual ObservableCollection<Arrendatario> ArrendatarioPago { get; set; }
+        public virtual ObservableCollection<Usuario> ArrendatarioPago { get; set; }
     }
 }

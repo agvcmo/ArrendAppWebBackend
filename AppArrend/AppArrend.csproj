@@ -207,7 +207,6 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ArchivoesController.cs" />
-    <Compile Include="Controllers\ArrendatariosController.cs" />
     <Compile Include="Controllers\ContratoesController.cs" />
     <Compile Include="Controllers\HabitacionsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -229,7 +228,6 @@
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Archivo.cs" />
-    <Compile Include="Models\Arrendatario.cs" />
     <Compile Include="Models\Contrato.cs" />
     <Compile Include="Models\Habitacion.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -306,11 +304,6 @@
     <Content Include="Views\Archivoes\Details.cshtml" />
     <Content Include="Views\Archivoes\Edit.cshtml" />
     <Content Include="Views\Archivoes\Index.cshtml" />
-    <Content Include="Views\Arrendatarios\Create.cshtml" />
-    <Content Include="Views\Arrendatarios\Delete.cshtml" />
-    <Content Include="Views\Arrendatarios\Details.cshtml" />
-    <Content Include="Views\Arrendatarios\Edit.cshtml" />
-    <Content Include="Views\Arrendatarios\Index.cshtml" />
     <Content Include="Views\Contratoes\Create.cshtml" />
     <Content Include="Views\Contratoes\Delete.cshtml" />
     <Content Include="Views\Contratoes\Details.cshtml" />

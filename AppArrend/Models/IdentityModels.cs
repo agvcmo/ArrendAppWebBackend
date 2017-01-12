@@ -36,9 +36,7 @@ namespace AppArrend.Models
 
         public System.Data.Entity.DbSet<AppArrend.Models.Novedad> Novedades { get; set; }
 
-        public System.Data.Entity.DbSet<AppArrend.Models.Usuario> Usuarios { get; set; }
-
-        public System.Data.Entity.DbSet<AppArrend.Models.Arrendatario> Arrendatarios { get; set; }
+        public System.Data.Entity.DbSet<AppArrend.Models.Usuario> Usuarios { get; set; }        
 
         public System.Data.Entity.DbSet<AppArrend.Models.Contrato> Contratos { get; set; }
 

@@ -40,7 +40,7 @@ namespace AppArrend.Models
         public bool SalaComedor { get; set; }
         [Display(Name = "Sala")]
         public bool Sala { get; set; }        
-        public virtual ObservableCollection<Arrendatario> Usuario { get; set; }
+        public virtual ObservableCollection<Usuario> Usuario { get; set; }
         [Display(Name = "Contrato inmueble")]
         public int ContratoInmuebleID { get; set; }
         public virtual Contrato ContratoInmueble { get; set; }        

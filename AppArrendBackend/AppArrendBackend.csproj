@@ -131,14 +131,6 @@
     <Compile Include="Controllers\NovedadsController.cs" />
     <Compile Include="Controllers\PagoesController.cs" />
     <Compile Include="Controllers\UsuariosController.cs" />
-    <Compile Include="Enumeracion\EnumEstadoContrato.cs" />
-    <Compile Include="Enumeracion\EnumGenero.cs" />
-    <Compile Include="Enumeracion\EnumMedioDePAgo.cs" />
-    <Compile Include="Enumeracion\EnumRolUsuario.cs" />
-    <Compile Include="Enumeracion\EnumSiNo.cs" />
-    <Compile Include="Enumeracion\EnumTipoArchivo.cs" />
-    <Compile Include="Enumeracion\EnumTipoDaño.cs" />
-    <Compile Include="Enumeracion\EnumTipoInmueble.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

@@ -1,12 +1,8 @@
-﻿using AppArrend.Enumeracion;
-using System;
-using System.Collections.Generic;
+﻿using System.ComponentModel.DataAnnotations;
+using Modelo.Enumeracion;
 using System.Collections.ObjectModel;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
 
-namespace AppArrend.Models
+namespace Modelo.Modelo
 {
     public class Inmueble
     {

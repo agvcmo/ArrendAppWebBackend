@@ -1,11 +1,6 @@
-﻿using AppArrend.Enumeracion;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
+﻿using System.ComponentModel.DataAnnotations;
 
-namespace AppArrend.Models
+namespace Modelo.Modelo
 {
     public class Novedad
     {
@@ -15,6 +10,6 @@ namespace AppArrend.Models
         [Display(Name = "Descripción")]
         public string Descripcion { get; set; }
         [Display(Name = "Tipo Daño")]
-        public EnumTipoDaño Tipo { get; set; }
+        public Enumeracion.EnumTipoDaño Tipo { get; set; }
     }
 }

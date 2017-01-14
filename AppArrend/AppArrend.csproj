@@ -226,16 +226,18 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201701111902207_InitialCreate.cs" />
+    <Compile Include="Migrations\201701111902207_InitialCreate.Designer.cs">
+      <DependentUpon>201701111902207_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701122108567_usuario.cs" />
+    <Compile Include="Migrations\201701122108567_usuario.Designer.cs">
+      <DependentUpon>201701122108567_usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\Archivo.cs" />
-    <Compile Include="Models\Contrato.cs" />
-    <Compile Include="Models\Habitacion.cs" />
     <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\Inmueble.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\Novedad.cs" />
-    <Compile Include="Models\Pago.cs" />
-    <Compile Include="Models\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -345,6 +347,23 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201701111902207_InitialCreate.resx">
+      <DependentUpon>201701111902207_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701122108567_usuario.resx">
+      <DependentUpon>201701122108567_usuario.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Modelo\Modelo.csproj">
+      <Project>{d4c27ad6-0681-40bd-85d0-ac685dbeb7a4}</Project>
+      <Name>Modelo</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

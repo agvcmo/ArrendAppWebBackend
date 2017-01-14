@@ -1,12 +1,8 @@
-﻿using AppArrend.Enumeracion;
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
+using System;
 
-namespace AppArrend.Models
+namespace Modelo.Modelo
 {
     public class Contrato
     {
@@ -26,7 +22,7 @@ namespace AppArrend.Models
         [Display(Name = "Fecha de Fin")]
         public DateTime FechaFin { get; set; }
         [Display(Name = "Estado Contrato")]
-        public EnumEstadoContrato Estado { get; set; }        
+        public Enumeracion.EnumEstadoContrato Estado { get; set; }        
         public virtual ObservableCollection<Archivo> Archivos { get; set; }
     }
 }

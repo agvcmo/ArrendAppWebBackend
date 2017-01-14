@@ -8,6 +8,8 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using AppArrend.Models;
+using Modelo.Modelo;
+using Modelo.Enumeracion;
 
 namespace AppArrend.Controllers
 {

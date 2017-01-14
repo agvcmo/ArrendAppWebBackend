@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using Modelo.Modelo;
+using Modelo.Enumeracion;
 using AppArrend.Models;
 
 namespace AppArrend.Controllers

@@ -17,6 +17,7 @@ namespace AppArrendBackend.Models
     
         public AppArrendContext() : base("name=AppArrendContext")
         {
+            base.Configuration.ProxyCreationEnabled = false;
         }
 
         public static AppArrendContext Create()
